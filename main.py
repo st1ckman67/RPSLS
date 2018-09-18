@@ -1,4 +1,3 @@
-# Rock-paper-scissors-lizard-Spock template
 import random
 
 # The key idea of this program is to equate the strings
