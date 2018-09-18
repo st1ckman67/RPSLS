@@ -21,7 +21,7 @@ import random
 # Spock vaporizes Rock
 # (and as it always has) Rock crushes Scissors
 
-win_message = {'scissors':['', '', ' cuts paper', '', 'eats paper', ''],
+win_message = {'scissors':['', '', ' cuts paper', ' decapitates lizard', 'eats paper'],
                 'paper':[' covers rock', ' disproves Spock'],
                 'rock':['', '', '', ' crushes lizard', ' crushes scissors'],
                 'lizard':['', ' poisons Spock', ' eats paper'],
