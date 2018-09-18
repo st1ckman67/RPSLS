@@ -89,11 +89,9 @@ def rpsls(player_choice):
     if result == 0:
         print("It's a tie")
     elif result in range(1,3) :
-        #print(player_choice, comp_choice)
         print_win(player_choice, comp_choice)
         print("Player wins!")        
     else:
-        #print(comp_choice, player_choice)
         print_win(comp_choice, player_choice)
         print("Computer wins!")
 
