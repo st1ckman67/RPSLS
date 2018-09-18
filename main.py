@@ -28,6 +28,7 @@ win_message = {'scissors':['', '', ' cuts paper', '', 'eats paper', ''],
                 'lizard':['', ' poisons Spock', ' eats paper'],
                 'Spock':[' vaporizes rock', '', '', '', ' smashes scissors ']}
 
+
 # helper functions
 def name_to_number(name):
     # convert name to number
@@ -58,11 +59,11 @@ def number_to_name(number):
         name = 'scissors'
     return name
 
+
 def print_win(winner, loser):    
     a = win_message.get(winner)
     b = name_to_number(loser)
     print(winner + a[b])
-
 
 
 def rpsls(player_choice): 
