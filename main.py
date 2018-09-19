@@ -21,11 +21,11 @@ import random
 # Spock vaporizes Rock
 # (and as it always has) Rock crushes Scissors
 
-win_message = {'scissors':['', '', ' cuts paper', ' decapitates lizard', 'eats paper'],
-                'paper':[' covers rock', ' disproves Spock'],
-                'rock':['', '', '', ' crushes lizard', ' crushes scissors'],
-                'lizard':['', ' poisons Spock', ' eats paper'],
-                'Spock':[' vaporizes rock', '', '', '', ' smashes scissors ']}
+win_message = {'scissors':{2:' cuts paper', 3:' decapitates lizard', 4:' eats paper'},
+                'paper':{0:' covers rock', 1:' disproves Spock'},
+                'rock':{3:' crushes lizard', 4:' crushes scissors'},
+                'lizard':{1:' poisons Spock', 2:' eats paper'},
+                'Spock':{0:' vaporizes rock', 4:' smashes scissors '}}
 
 
 # helper functions
@@ -60,9 +60,9 @@ def number_to_name(number):
 
 
 def print_win(winner, loser):    
-    a = win_message.get(winner)
-    b = name_to_number(loser)
-    print(winner + a[b])
+    a = win_message[winner][loser]
+
+    print(winner + a)
 
 
 def rpsls(player_choice): 
@@ -88,10 +88,10 @@ def rpsls(player_choice):
     if result == 0:
         print("It's a tie")
     elif result in range(1,3) :
-        print_win(player_choice, comp_choice)
+        print_win(player_choice, comp_number)
         print("Player wins!")        
     else:
-        print_win(comp_choice, player_choice)
+        print_win(comp_choice, player_number)
         print("Computer wins!")
 
     
